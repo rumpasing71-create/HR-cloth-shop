@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR CLOTH SHOP</title>
+<style>
+:root{--ink:#17202a;--muted:#667085;--accent:#b64b35;--cream:#fbf7f1;--line:#eee5dc}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);background:#fff}
+header{background:var(--cream);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}
+.logo{font-weight:900;letter-spacing:1.5px;font-size:21px}.logo span{color:var(--accent)}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:58px 7%;background:linear-gradient(110deg,#f6e9dc,#fbf7f1);display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:bold;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(35px,6vw,62px);line-height:1.08;margin:12px 0}.hero p{color:var(--muted);line-height:1.7}
+.hero-art{min-height:250px;border-radius:22px;background:linear-gradient(145deg,#d9b8a0,#9e695a);display:flex;align-items:center;justify-content:center;color:white;font-size:clamp(28px,5vw,50px);font-weight:900;text-align:center;padding:20px}
+.btn{display:inline-block;border:0;border-radius:999px;background:var(--ink);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;cursor:pointer}
+section{padding:42px 6%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:20px}.section-head h2{margin:0;font-size:28px}.muted{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:white}
+.product-art{height:190px;display:flex;align-items:center;justify-content:center;font-size:55px;background:#f2e9e1}
+.card:nth-child(2) .product-art{background:#e8edf0}.card:nth-child(3) .product-art{background:#eee9df}.card-body{padding:16px}.card h3{margin:0 0 7px}.price{font-weight:800;color:var(--accent);margin:10px 0 14px}.card button{width:100%}
+.info{background:var(--cream);border-radius:18px;padding:24px;line-height:1.8}
+footer{background:var(--ink);color:white;padding:28px 6%;text-align:center;font-size:13px}
+.cartbar{position:fixed;right:18px;bottom:18px;background:var(--accent);color:white;border:0;border-radius:999px;padding:14px 20px;font-weight:bold;box-shadow:0 5px 20px #0002;cursor:pointer;z-index:8}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:10;align-items:center;justify-content:center;padding:15px}.modal.open{display:flex}.panel{background:white;border-radius:18px;padding:22px;width:min(520px,100%);max-height:90vh;overflow:auto}
+input,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin:7px 0 13px;font:inherit}
+label{font-size:14px;font-weight:bold}.close{float:right;background:#eee;border:0;border-radius:50%;width:32px;height:32px;cursor:pointer}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding:38px 6%}.grid{grid-template-columns:1fr 1fr}nav a{margin-left:8px;font-size:12px}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.hero-art{min-height:170px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">HR <span>CLOTH SHOP</span></div>
+  <nav><a href="#products">পোশাক</a><a href="#about">আমাদের সম্পর্কে</a></nav>
+</header>
+<div class="hero">
+  <div><div class="eyebrow">NEW STYLE • EVERYDAY COMFORT</div>
+    <h1>তোমার স্টাইল,<br>তোমার পছন্দ।</h1>
+    <p>HR CLOTH SHOP-এ স্বাগতম। জামা ও প্যান্টের নতুন কালেকশন দেখো। পছন্দের পণ্য কার্টে যোগ করে অর্ডারের তথ্য পাঠাও।</p>
+    <a class="btn" href="#products">কালেকশন দেখো</a>
+  </div>
+  <div class="hero-art">HR<br>CLOTH SHOP</div>
+</div>
+<section id="products">
+  <div class="section-head"><div><div class="eyebrow">OUR COLLECTION</div><h2>জনপ্রিয় পোশাক</h2></div><div class="muted">নমুনা পণ্য ও দাম</div></div>
+  <div class="grid" id="productGrid"></div>
+</section>
+<section id="about">
+ <div class="info"><h2>অর্ডার করার নিয়ম</h2>
+ <p>১. পছন্দের পোশাক কার্টে যোগ করো।<br>২. “অর্ডার করো” বাটনে গিয়ে নাম, ফোন ও ঠিকানা দাও।<br>৩. Cash on Delivery অথবা UPI পছন্দ করো।</p>
+ <p><b>দ্রষ্টব্য:</b> এটি একটি ফ্রি ডেমো ওয়েবসাইট। এখানে দেওয়া পণ্য ও দাম নমুনা। আসল অর্ডার নেওয়ার আগে নিজের পণ্যের ছবি, সঠিক দাম, যোগাযোগ নম্বর এবং UPI তথ্য যোগ করতে হবে।</p></div>
+</section>
+<footer>© 2026 HR CLOTH SHOP • All rights reserved</footer>
+<button class="cartbar" onclick="openCart()">🛒 কার্ট (<span id="count">0</span>)</button>
+<div class="modal" id="modal"><div class="panel">
+ <button class="close" onclick="closeCart()">×</button><h2>তোমার অর্ডার</h2>
+ <div id="cartItems" class="muted">কার্ট খালি।</div><h3 id="total">মোট: ₹0</h3>
+ <form id="orderForm">
+  <label>তোমার নাম</label><input required name="name" placeholder="নাম লিখো">
+  <label>ফোন নম্বর</label><input required name="phone" inputmode="tel" placeholder="ফোন নম্বর">
+  <label>ডেলিভারির ঠিকানা</label><textarea required name="address" rows="3" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+  <label>পেমেন্ট পদ্ধতি</label>
+  <select name="payment" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin:7px 0 15px">
+   <option>Cash on Delivery</option><option>UPI (পেমেন্ট তথ্য দোকানদার নিশ্চিত করবেন)</option>
+  </select>
+  <button class="btn" type="submit">অর্ডারের বিবরণ তৈরি করো</button>
+ </form>
+ <p class="muted">এই ডেমো অর্ডারটি শুধু তোমার ডিভাইসে বিবরণ দেখায়; অনলাইনে দোকানদারের কাছে পাঠায় না।</p>
+ <div id="orderResult"></div>
+</div></div>
+<script>
+const products=[
+ {name:"ক্যাজুয়াল টি-শার্ট",price:399,icon:"👕"},
+ {name:"ডেনিম প্যান্ট",price:899,icon:"👖"},
+ {name:"ক্যাজুয়াল শার্ট",price:599,icon:"👔"}
+];
+let cart=[];
+const grid=document.getElementById('productGrid');
+products.forEach((p,i)=>{grid.innerHTML+=`<article class="card"><div class="product-art">${p.icon}</div><div class="card-body"><h3>${p.name}</h3><div class="muted">সাইজ ও রং পরে যোগ করা যাবে</div><div class="price">₹${p.price}</div><button class="btn" onclick="add(${i})">কার্টে যোগ করো</button></div></article>`});
+function add(i){cart.push(products[i]);document.getElementById('count').textContent=cart.length}
+function openCart(){document.getElementById('modal').classList.add('open');renderCart()}
+function closeCart(){document.getElementById('modal').classList.remove('open')}
+function renderCart(){let el=document.getElementById('cartItems');el.innerHTML=cart.length?cart.map(p=>`${p.name} — ₹${p.price}`).join('<br>'):'কার্ট খালি।';document.getElementById('total').textContent='মোট: ₹'+cart.reduce((s,p)=>s+p.price,0)}
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();if(!cart.length){alert('আগে পণ্য কার্টে যোগ করো।');return}let d=new FormData(e.target);let summary=`HR CLOTH SHOP অর্ডার\\nনাম: ${d.get('name')}\\nফোন: ${d.get('phone')}\\nঠিকানা: ${d.get('address')}\\nপেমেন্ট: ${d.get('payment')}\\n\\n${cart.map(p=>p.name+' - ₹'+p.price).join('\\n')}\\nমোট: ₹${cart.reduce((s,p)=>s+p.price,0)}`;document.getElementById('orderResult').innerHTML='<p><b>অর্ডারের বিবরণ তৈরি হয়েছে।</b></p><textarea rows="9" readonly></textarea><p class="muted">বিবরণটি কপি করে দোকানদার/অভিভাবককে পাঠাও।</p>';document.querySelector('#orderResult textarea').value=summary});
+</script>
+</body></html>
